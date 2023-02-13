@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+  <div class="container-fluid">
+    <img src="../../../assets/images/aqaratLogo.png" routerLink="/" />
+    <!-- <span class="navbar-brand" routerLink="/">Aqarat</span> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <div class="nav-link" aria-current="page" routerLink="./products" routerLinkActive="active">Products</div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link" *ngIf="isAdmin" routerLink="./users" routerLinkActive="active">Users</div>
+        </li>
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link" routerLink="./addproduct">Add New Product</a>
+        </li>
+      </ul>
+
+      <button (click)="logout()" class="btn btn-outline-success" type="submit">Logout</button>
+    </div>
+  </div>
+</nav>

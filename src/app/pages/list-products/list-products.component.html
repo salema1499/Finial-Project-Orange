@@ -1,0 +1,6 @@
+<app-loading *ngIf="callingApi"></app-loading>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" *ngIf="!callingApi">
+  <app-product-card (onDelete)="deleteProduct($event)" (onBuy)="buyProduct($event)" *ngFor="let p of products"
+    [data]="p" (onFree)="freeProduct($event)"></app-product-card>
+</div>

@@ -1,0 +1,4 @@
+<app-loading *ngIf="callingApi"></app-loading>
+<div *ngIf="!callingApi" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <app-user-card *ngFor="let u of users" [user]='u' (onDelete)="deleteUser($event)"></app-user-card>
+</div>

@@ -1,0 +1,22 @@
+/* .empty{
+    width: 15vw;
+} */
+
+.container-fluid {
+  direction: var(--dir);
+}
+.content {
+  width: 100vw;
+  padding-top: 20vh;
+  /* display: flex; */
+  max-height: 94vh;
+  overflow: auto;
+  /* margin-left: 13vw; */
+  text-align: center;
+  /* direction: ltr; */
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+  /* background-color:'red'; */
+}

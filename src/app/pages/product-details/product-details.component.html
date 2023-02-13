@@ -1,0 +1,25 @@
+<app-loading *ngIf="callingApi"></app-loading>
+
+<section class="productCard" *ngIf="!callingApi">
+  <div class="container">
+    <div class="info">
+      <h3 class="name">{{product?.title}}</h3>
+      <h1 class="slogan">{{product?.address}}</h1>
+      <p class="price">{{product?.price}} EGP</p>
+      <div class="attribs">
+      </div>
+      <div class="buttons">
+        <div class="button colored" *ngIf="product?.status !== 'sold' && !buying" (click)="buyProd()">Buy now</div>
+        <div class="spinner-border" role="status" *ngIf="buying"></div>
+      </div>
+      <div class="slogan" *ngIf="product?.status === 'sold'">
+        Sold
+      </div>
+    </div>
+    <div class="preview">
+      <div class="imgs">
+        <img class="activ" [src]="product?.coverImg" alt="img 1">
+      </div>
+    </div>
+  </div>
+</section>
